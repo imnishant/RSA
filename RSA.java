@@ -16,7 +16,7 @@ public class RSABigInteger {
 	 public static void main(String args[])
 	 {
 		 
-		 Scanner sc = new Scanner(System.in);
+	     Scanner sc = new Scanner(System.in);
 	     r = new Random();
 	     p = BigInteger.probablePrime(bitlength, r);
 	     q = BigInteger.probablePrime(bitlength, r);
@@ -35,9 +35,9 @@ public class RSABigInteger {
 	     BigInteger m = new BigInteger(msg.getBytes());
 	     BigInteger c = m.modPow(e, N);
 	     BigInteger r = c.modPow(d, N);
-		 System.out.println("Encrypted data is " + c);
-		 System.out.println("Decrypted data is " + r);
-		 String decrypt = new String(r.toByteArray());
-		 System.out.println(decrypt);
+	     System.out.println("Encrypted data in big integer is " + c);
+	     System.out.println("Decrypted data in big integer is " + r);
+	     String decrypt = new String(r.toByteArray());
+	     System.out.println("Decrypted message is" + decrypt);
 	}
 }
